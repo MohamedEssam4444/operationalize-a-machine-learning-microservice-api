@@ -1,15 +1,14 @@
 <include a CircleCI status badge, here>
+https://circleci.com/gh/MohamedEssam4444/operationalize-a-machine-learning-microservice-api.svg?style=svg
 
 ## Project Overview
 
-In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
-
-You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
+given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
 
 ### Project Tasks
 
-Your project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project you will:
-* Test your project code using linting
+project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project :
+* Test project code using linting
 * Complete a Dockerfile to containerize this application
 * Deploy your containerized application using Docker and make a prediction
 * Improve the log statements in the source code for this application
@@ -17,26 +16,26 @@ Your project goal is to operationalize this working, machine learning microservi
 * Deploy a container using Kubernetes and make a prediction
 * Upload a complete Github repo with CircleCI to indicate that your code has been tested
 
-You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
+### setup the environmnent
+Create a virtualenv and activate it
+Run make install to install the necessary dependencies
 
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
+### running app.py
+Standalone: python app.py
+Run in Docker: ./run_docker.sh
+Run in Kubernetes: ./run_kubernetes.sh
 
----
+### kubernetes steps
+Setup and Configure Docker locally
+Setup and Configure Kubernetes locally
+Create Flask app in Container
+Run via kubectl
 
-## Setup the Environment
-
-* Create a virtualenv and activate it
-* Run `make install` to install the necessary dependencies
-
-### Running `app.py`
-
-1. Standalone:  `python app.py`
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
-
-### Kubernetes Steps
-
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+### explanation of the files in the repo 
+Makefile : The Makefile includes instructions on environment setup and lint tests
+run_docker : build image locally specified in Dockerfile
+app.py : contain application
+kubernetes_config.yaml : contains template for building the kubernetes cluster with 3 replica pods
+followed by : kubectl create -f kubernetes_config.yaml to run template
+upload_docker: file tags and uploads an image to Docker Hub
+run_kubernetes.sh: Run the Docker Hub container with kubernetes and portforward app (another way to use kubernetes with github other than using kubernetes_config.yaml)
