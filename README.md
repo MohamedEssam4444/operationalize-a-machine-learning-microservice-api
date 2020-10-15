@@ -54,6 +54,10 @@ followed by : kubectl create -f kubernetes_config.yaml to run template
 
 upload_docker: file tags and uploads an image to Docker Hub
 
+out_docker.txt: after running make_prediction ; contains log output from Docker prediction
+
 run_kubernetes.sh: Run the Docker Hub container with kubernetes and portforward app (another way to use kubernetes with docker container other than using kubernetes_config.yaml)
+
+out_kubernetes.txt: after running make_prediction ; log output from kubernetes prediction
 
 .circleci/config.yaml : for the integration between circle ci and the project to test it 
