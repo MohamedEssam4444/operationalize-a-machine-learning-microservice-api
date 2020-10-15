@@ -17,25 +17,43 @@ project goal is to operationalize this working, machine learning microservice us
 * Upload a complete Github repo with CircleCI to indicate that your code has been tested
 
 ### setup the environmnent
+
 Create a virtualenv and activate it
+
 Run make install to install the necessary dependencies
 
 ### running app.py
+
 Standalone: python app.py
+
 Run in Docker: ./run_docker.sh
+
 Run in Kubernetes: ./run_kubernetes.sh
 
 ### kubernetes steps
+
 Setup and Configure Docker locally
+
 Setup and Configure Kubernetes locally
+
 Create Flask app in Container
+
 Run via kubectl
 
 ### explanation of the files in the repo 
+
 Makefile : The Makefile includes instructions on environment setup and lint tests
+
 run_docker : build image locally specified in Dockerfile
+
 app.py : contain application
+
 kubernetes_config.yaml : contains template for building the kubernetes cluster with 3 replica pods
+
 followed by : kubectl create -f kubernetes_config.yaml to run template
+
 upload_docker: file tags and uploads an image to Docker Hub
+
 run_kubernetes.sh: Run the Docker Hub container with kubernetes and portforward app (another way to use kubernetes with github other than using kubernetes_config.yaml)
+
+.circleci/config.yaml : for the integration between circle ci and the project to test it 
