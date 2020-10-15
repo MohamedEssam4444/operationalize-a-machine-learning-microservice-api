@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: mlapp
-        image: sidiali/app_repo 
+        image: sidiali/app_repo:app_tag
         imagePullPolicy: Always
         ports:
         - containerPort: 80
