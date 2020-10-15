@@ -54,6 +54,6 @@ followed by : kubectl create -f kubernetes_config.yaml to run template
 
 upload_docker: file tags and uploads an image to Docker Hub
 
-run_kubernetes.sh: Run the Docker Hub container with kubernetes and portforward app (another way to use kubernetes with github other than using kubernetes_config.yaml)
+run_kubernetes.sh: Run the Docker Hub container with kubernetes and portforward app (another way to use kubernetes with docker container other than using kubernetes_config.yaml)
 
 .circleci/config.yaml : for the integration between circle ci and the project to test it 
