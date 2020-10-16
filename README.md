@@ -58,6 +58,9 @@ out_docker.txt: after running make_prediction ; contains log output from Docker 
 
 run_kubernetes.sh: Run the Docker Hub container with kubernetes and portforward app (another way to use kubernetes with docker container other than using kubernetes_config.yaml)
 
+
 out_kubernetes.txt: after running make_prediction ; log output from kubernetes prediction
+
+![Screenshot from 2020-10-16 07-34-05](https://user-images.githubusercontent.com/68178003/96217510-07bea880-0f83-11eb-9a41-c1c6a2a69cce.png)
 
 .circleci/config.yaml : for the integration between circle ci and the project to test it 
