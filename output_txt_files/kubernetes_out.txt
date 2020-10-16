@@ -12,3 +12,4 @@ prediction value when running make_prediction :
 }
 
 
+![Screenshot from 2020-10-16 07-34-05](https://user-images.githubusercontent.com/68178003/96217510-07bea880-0f83-11eb-9a41-c1c6a2a69cce.png)
