@@ -10,6 +10,8 @@ dockerpath=0d8fc1481ee2
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker login --username sidiali 
+docker tag $dockerpath sidiali/app_repo:app_tag
 
 # Step 3:
 # Push image to a docker repository
