@@ -42,24 +42,24 @@ Run via kubectl
 
 ### explanation of the files in the repo 
 
-Makefile : The Makefile includes instructions on environment setup and lint tests
+**Makefile** : The Makefile includes instructions on environment setup and lint tests
 
-run_docker : build image locally specified in Dockerfile
+**run_docker** : build image locally specified in Dockerfile
 
-app.py : contain application
+**app.py** : contain application
 
-kubernetes_config.yaml : contains template for building the kubernetes cluster with 3 replica pods
+**kubernetes_config.yaml** : contains template for building the kubernetes cluster with 3 replica pods
 
-followed by : kubectl create -f kubernetes_config.yaml to run template
+followed by : `kubectl create -f kubernetes_config.yaml to run template`
 
-upload_docker: file tags and uploads an image to Docker Hub
+**upload_docker**: file tags and uploads an image to Docker Hub
 
-out_docker.txt: after running make_prediction ; contains log output from Docker prediction
+**out_docker.txt**: after running make_prediction ; contains log output from Docker prediction
 
-run_kubernetes.sh: Run the Docker Hub container with kubernetes and portforward app (another way to use kubernetes with docker container other than using kubernetes_config.yaml)
+**run_kubernetes.sh**: Run the Docker Hub container with kubernetes and portforward app (another way to use kubernetes with docker container other than using kubernetes_config.yaml)
 
 
-out_kubernetes.txt: after running make_prediction ; log output from kubernetes prediction
+**out_kubernetes.txt**: after running make_prediction ; log output from kubernetes prediction
 
 ![Screenshot from 2020-10-16 07-34-05](https://user-images.githubusercontent.com/68178003/96217510-07bea880-0f83-11eb-9a41-c1c6a2a69cce.png)
 
