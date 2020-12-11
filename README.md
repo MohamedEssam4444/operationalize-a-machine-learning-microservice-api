@@ -1,9 +1,15 @@
 <include a CircleCI status badge, here>
-https://circleci.com/gh/MohamedEssam4444/operationalize-a-machine-learning-microservice-api.svg?style=svg
+https://circleci.com/gh/MohamedEssam4444/operationalize-a-machine-learning-microservice-api-docker-kubernetes.svg?style=svg
 
 ## Project Overview
 
 given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
+
+### Testing Screenshots
+
+![circleci2](https://user-images.githubusercontent.com/68178003/101932800-fe009c80-3be3-11eb-8fe2-07b096f43afb.png)
+
+![circleci3](https://user-images.githubusercontent.com/68178003/101932816-01942380-3be4-11eb-87df-2ff132d59d06.png)
 
 ### Project Tasks
 
